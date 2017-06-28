@@ -1,0 +1,67 @@
+.btn {
+  font-size: 87.5%;
+  padding: 0.563em 1.375em;
+  border: 1px solid;
+  transition: 0.3s;
+  &--clean {
+    color: $main-color;
+    &:hover {
+    color: #fff;
+    background: $main-color;
+    } 
+  }
+  &--fill {
+    color: #fff;
+    background: $main-color;
+    border-color: $main-color;
+    &:hover {
+    color: $main-color;
+    background: #fff;
+    }    
+  }
+  &--center {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.to-top-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 45px;
+  height: 45px;
+  background: rgba($main-color, 0.7);
+  overflow: hidden;
+  text-indent: 9999px;
+  transition: 0.3s;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(135deg);
+    width: 20px;
+    height: 20px;
+    border-bottom: 3px solid #fff;
+    border-left: 3px solid #fff;
+  }
+  &:hover {
+   background: rgba($main-color, 1);
+  }
+}
+
+/*MENU button*/
+
+.nav-toggle {
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: $main-color;
+  text-align: initial;
+  transition: 0.3s;
+  @include arrow (20px, 20px, $main-color);
+}

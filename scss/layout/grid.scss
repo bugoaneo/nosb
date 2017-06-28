@@ -1,0 +1,30 @@
+.row {
+  @extend %flex;
+}
+
+.col-4 {
+  width: 25%;
+}
+
+.col-5 {
+  width: 41.66666666666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+[class*=col-]{
+
+  @include breakpoint($sm) {
+    width: 100%;
+    margin-bottom: 20px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

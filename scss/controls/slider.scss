@@ -1,0 +1,117 @@
+//slider 
+
+.slider {
+  min-height: 510px;
+}
+
+.slider__item {
+  position: relative;
+  min-height: 510px !important;
+  border: 1px solid transparent;
+  background: url(../img/slider.jpg) no-repeat center center/cover;
+}
+
+.slider__info {
+  position: relative;
+  max-width: 28.125em;
+  padding: 4em 3.563em 3em 3.563em;
+  margin: 6% auto auto 10%;
+  background: rgba(#fff, 0.7);
+  &:after {
+    position:absolute;
+    content: '';
+    display: block;
+    left: 0;
+    bottom: -30px;
+    width: 100%;
+    border-style: solid;
+    border-width: 0 0 30px 28em;
+    border-color: transparent transparent transparent rgba(#fff, 0.7);
+  }
+  @include breakpoint($xs) {
+    padding: 2em;
+    margin: 20% 2%;
+  }   
+}
+
+.slider__lead {
+  font-size: 2em;
+  text-transform: uppercase;
+  @include breakpoint($sm) {
+    font-size: 1.8em;
+  }
+}
+
+.slider__text {
+  color: $main-color;
+  font-size: 3em;
+  @include breakpoint($sm) {
+    font-size: 1.5em;
+  }  
+}
+
+.slick-dots {
+  font-size: 0;
+
+}
+.slick-dots li {
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  button {
+    width: 10px;
+    height: 10px;
+    font-size: 0;
+    background-color: $light;
+  }
+  &:hover, &.slick-active {
+    button {
+      background: $main-color;
+    }
+  }
+}
+
+.main-next, .main-prev {
+  position: absolute;
+  top: 50%;
+  width: 35px;
+  height: 35px;
+  border-left: 6px solid #fff;
+  border-bottom: 6px solid #fff;
+  z-index: 2;
+}
+.main-prev {
+  left: 25px;
+  transform: rotate(45deg);
+}
+
+.main-next {
+  right: 25px;
+  transform: rotate(-135deg);
+}
+
+
+//maecenas slider
+
+.maecenas__list {
+  max-width: 1140px;
+  // height: 150px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.maecenas__item {
+  position: relative;
+  width: 233px;
+  height: 150px !important;
+  margin: 25px;
+  box-shadow: 0px 0px 10px rgba(#000, 0.5);
+  img {
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,163 @@
+.nav-toggle{
+  display: none;
+ @include breakpoint($xxl) {
+    display: block;
+  }
+}
+
+.nav {
+  &--inner {
+    border-bottom: 3px solid $border;
+  }
+}
+
+.nav__list {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  @include breakpoint($xxl) {
+    display: none;
+  }
+}
+
+.nav__item {
+  // position: relative;
+  padding: 0 5px;
+  &:last-child {
+    &:after {
+      display: none;
+    }
+    &:hover {
+      .nav__link {
+       background: initial;
+      color: initial;  
+      }
+    }
+  }
+  &:first-child .nav__link {
+    padding-left: 0;
+  }
+  &:hover {
+    .nav__link {
+      background: $main-color;
+      color: #fff;      
+    }
+  }
+}
+
+.nav__link {
+  position: relative;
+  display: block;  
+  padding: 10px 24px 25px 24px;
+  font-size: 1.125em;
+  transition: 0.3s;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -4px;
+    top: 40%;
+    transform: translateY(-50%);
+    height: 18px;
+    width: 1px;
+    background: $text;
+  }
+  &--active {
+    color: $main-color;
+  }
+  &--vk {
+    padding: 10px 38px 10px 24px;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 45%;
+      right: -3px;
+      transform: translateY(-50%);
+      display: block;
+      width: 24px; 
+      height: 24px;
+      background: url(../img/icons/sprites.png) no-repeat 0 -137px;
+    }
+  }
+}
+
+
+/*dropdawn*/
+
+.dropdown {
+  position: absolute;
+  left: 9999px;
+  width: 100%;
+  opacity: 0;
+  z-index: -1;
+  padding: 20px 0;
+  background: #fff;
+  border-top: 3px solid transparent;
+}
+
+.nav__dropdown {
+  column-count: 4;
+}
+.nav__dropdown-item {
+  .nav__dropdown-link {
+    &:hover {
+      background: transparent;
+      color: $main-color;
+    }
+  }
+}
+
+.nav__dropdown-link {
+  display: block;
+  padding: 9px 0;
+  &:after {
+    display: none;
+  }
+  &--active {
+    color: $main-color;
+  }
+}
+
+.nav__item:hover > .nav__link ~ .dropdown {
+  left: 0;
+  opacity: 1;
+  z-index: 100;
+  border-top: 3px solid $main-color;
+}
+
+
+/*responsiv*/
+
+.nav__list--active {
+  display: flex;
+  flex-direction: column;
+  .nav__item {
+    &:first-child .nav__link {
+      padding-left: 24px;
+    } 
+    &--trigger {
+      @include arrow (10px, 10px, $main-color);
+    }
+  }
+  .nav__link {
+    &:after {
+      display: none;
+    }
+  }
+  .nav__dropdown {
+    column-count: auto;
+  }
+  .nav__item:hover > .nav__link ~ .dropdown {
+    position: relative;
+    left: 0;
+    opacity: 1;
+    z-index: 100;
+    
+  }
+  .nav__link--vk {
+    &:after {
+      display: block;
+    }
+  }
+}

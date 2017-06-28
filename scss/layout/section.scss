@@ -1,0 +1,115 @@
+/* bredcrambs */
+.bredcrambs__list {
+  margin-bottom: 35px;
+  font-size: 0;
+}
+
+.bredcrambs__item {
+  position: relative;
+  @include in-b;
+  font-size: initial;
+  &:after {
+    content: '';
+    @include centered(y);
+    right: 6px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 0 4px 5px;
+    border-color: transparent transparent transparent $main-color;
+  }
+  &--active {
+    color: $lighten-text;
+  }
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.bredcrambs__link {
+  position: relative;
+  padding: 10px 20px 10px 0;
+}
+
+.title-wrap {
+  @extend %flex;
+  align-items: center;
+  margin-bottom: 40px;
+  .stn-title {
+    margin-bottom: 0;
+  }
+}
+
+.help {
+  background-color: $section-bg;
+}
+
+.help__list {
+  @extend %flex;
+  margin: 70px auto 0 auto;
+  text-align: center;
+}
+
+.help__item {
+  flex: 1 1 25%;
+}
+
+.help__pic {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 30px auto;
+  border: 6px solid $border;
+  border-radius: 100%;
+  overflow: hidden;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.gratitude__text {
+  flex: 1 1 460px;
+}
+
+.gratitude__list {
+  @extend %flex;
+  // flex: 1 1 50%;
+  flex-wrap: nowrap;
+}
+
+.gratitude__item {
+  width: 31%;
+  min-height: 240px;
+  box-shadow: 0px 0px 6px rgba(#000, 0.5);
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.thank {
+  background-color: $section-bg;
+  .row {
+    align-items: center;
+  }
+}
+
+.thank__item {
+  margin-bottom: 40px;
+  font-size: 1.875em;
+  text-transform: uppercase;
+}
+
+//footer
+.footer {
+  padding: 30px 0;
+  background: $fill;
+  color: #fff;
+  text-align: center;
+}
