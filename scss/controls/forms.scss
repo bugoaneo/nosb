@@ -1,0 +1,46 @@
+//callback
+
+.callback-form {
+  display: none;
+}
+
+.form-callback {
+  position: relative;
+  max-width: 556px;
+  padding: 60px 70px;
+  margin: 0 auto;
+  border: 1px solid $border;
+  background: #fff;
+  @include breakpoint($xs) {
+    padding: 30px 40px;
+  }
+}
+
+.form__title {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.form__text {
+  margin-bottom: 20px;
+}
+
+.form__input {
+  display: block;
+  width: 85%;
+  padding: 6px;
+  margin-bottom: 25px;
+  border: 1px solid $border;
+  font-size: 0.9em;
+}
+
+.form__input::placeholder {
+  opacity: 1;
+  font-family: $font-family;
+}
+
+.form-callback button.mfp-close {
+  font-size: 48px;
+}

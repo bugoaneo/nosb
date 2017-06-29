@@ -1,27 +1,27 @@
 .row {
-  @extend %flex;
+  @extend .row;
+  @extend .between-xs;
 }
 
-.col-4 {
-  width: 25%;
+.col-3 {
+  @extend .col-md-3;
+  // @extend .col-xs-12;
 }
 
 .col-5 {
-  width: 41.66666666666667%;
+  @extend .col-md-5;
 }
 
 .col-6 {
-  width: 50%;
+  @extend .col-md-6;
 }
 
 .col-9 {
-  width: 75%;
+  @extend .col-md-9;
 }
 
-[class*=col-]{
-
+[class*=col-] {
   @include breakpoint($sm) {
-    width: 100%;
     margin-bottom: 20px;
     &:last-of-type {
       margin-bottom: 0;
