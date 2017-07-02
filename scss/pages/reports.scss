@@ -1,0 +1,55 @@
+/* .report */
+
+.report {
+  .row {
+    margin: 0 -1em;
+      @include breakpoint(800px) {
+        margin: 0 2em;
+      }
+    }
+}
+
+.report__text {
+  padding-bottom: 74px;
+  border-bottom: 1px solid $border;
+  margin-bottom: 35px;
+}
+
+/* .report__filtres */
+.report__filtres {
+  margin-bottom: 50px;
+}
+
+/* .report__list */
+
+.report__list {
+  margin-bottom: 50px;
+  .col-4 {
+    display: flex;
+    margin-bottom: 50px;
+  }  
+}
+
+.report__item {
+  box-shadow: 0px 0px 10px rgba(#000,.15);
+}
+
+.report__pic {
+  height: 222px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.report__descr {
+  padding: 20px 10px 15px 25px;
+}
+
+.report__assist {
+  margin-bottom: 15px;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  color: $lighten-text;
+}

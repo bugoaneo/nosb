@@ -844,6 +844,77 @@ p {
 .form-callback button.mfp-close {
   font-size: 48px; }
 
+/* form-filtres */
+.form-filtres__label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.125em;
+  text-transform: uppercase;
+  cursor: pointer; }
+
+.form-col {
+  margin-bottom: 20px; }
+  .form-col--4 {
+    padding: 0 20px; }
+    @media (max-width: 650px) {
+      .form-col--4 {
+        width: 100%;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1 1 100%;
+        -ms-flex: 1 1 100%;
+        flex: 1 1 100%; } }
+  @media (max-width: 900px) {
+    .form-col--2 {
+      margin-bottom: 0; } }
+  @media (max-width: 650px) {
+    .form-col--2 {
+      width: 100%;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 1 100%;
+      -ms-flex: 1 1 100%;
+      flex: 1 1 100%; } }
+  .form-col--2:last-child {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    text-align: right; }
+    @media (max-width: 650px) {
+      .form-col--2:last-child {
+        margin-top: 20px; } }
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background: #ffffff; }
+  .select-wrapper:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: #d2d3d5 transparent transparent transparent;
+    pointer-events: none; }
+
+.form-filtres__select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  height: 100%;
+  padding: 0 30px 0 10px;
+  background: none;
+  outline: none;
+  border: 1px solid #d2d3d5;
+  font-size: 14px; }
+  .form-filtres__select option {
+    padding: 10px; }
+
 /* Uncomment and set these variables to customize the grid. */
 /*.container-fluid {
   margin-right: auto;
@@ -1095,8 +1166,11 @@ p {
   .col-sm-2,
   .col-sm-3,
   .col-sm-4,
+  .form-col--2,
   .col-sm-5,
   .col-sm-6,
+  .col-3,
+  .col-4,
   .col-sm-7,
   .col-sm-8,
   .col-sm-9,
@@ -1135,7 +1209,7 @@ p {
     -webkit-flex-basis: 25%;
     flex-basis: 25%;
     max-width: 25%; }
-  .col-sm-4 {
+  .col-sm-4, .form-col--2 {
     -ms-flex-preferred-size: 33.333%;
     -webkit-flex-basis: 33.333%;
     flex-basis: 33.333%;
@@ -1145,7 +1219,7 @@ p {
     -webkit-flex-basis: 41.667%;
     flex-basis: 41.667%;
     max-width: 41.667%; }
-  .col-sm-6 {
+  .col-sm-6, .col-3, .col-4 {
     -ms-flex-preferred-size: 50%;
     -webkit-flex-basis: 50%;
     flex-basis: 50%;
@@ -1262,9 +1336,12 @@ p {
   .col-md,
   .col-md-1,
   .col-md-2,
+  .form-col--2,
   .col-md-3,
   .col-3,
   .col-md-4,
+  .col-4,
+  .form-col--4,
   .col-md-5,
   .col-5,
   .col-md-6,
@@ -1298,7 +1375,7 @@ p {
     -webkit-flex-basis: 8.333%;
     flex-basis: 8.333%;
     max-width: 8.333%; }
-  .col-md-2 {
+  .col-md-2, .form-col--2 {
     -ms-flex-preferred-size: 16.667%;
     -webkit-flex-basis: 16.667%;
     flex-basis: 16.667%;
@@ -1308,7 +1385,7 @@ p {
     -webkit-flex-basis: 25%;
     flex-basis: 25%;
     max-width: 25%; }
-  .col-md-4 {
+  .col-md-4, .col-4, .form-col--4 {
     -ms-flex-preferred-size: 33.333%;
     -webkit-flex-basis: 33.333%;
     flex-basis: 33.333%;
@@ -2091,11 +2168,58 @@ img.mfp-img {
       margin-bottom: 30px; } }
 
 .gratitude-page__pic {
-  max-width: 260px;
+  min-height: 368px;
   margin-bottom: 20px;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); }
   .gratitude-page__pic img {
     width: 100%; }
+
+/* .report */
+.report .row {
+  margin: 0 -1em; }
+  @media (max-width: 800px) {
+    .report .row {
+      margin: 0 2em; } }
+
+.report__text {
+  padding-bottom: 74px;
+  border-bottom: 1px solid #d2d3d5;
+  margin-bottom: 35px; }
+
+/* .report__filtres */
+.report__filtres {
+  margin-bottom: 50px; }
+
+/* .report__list */
+.report__list {
+  margin-bottom: 50px; }
+  .report__list .col-4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 50px; }
+
+.report__item {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); }
+
+.report__pic {
+  height: 222px; }
+  .report__pic img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover; }
+
+.report__descr {
+  padding: 20px 10px 15px 25px; }
+
+.report__assist {
+  margin-bottom: 15px;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  color: #707173; }
 
 /*# sourceMappingURL=main.css.map */

@@ -4,8 +4,14 @@
 }
 
 .col-3 {
+  @extend .col-sm-6;
   @extend .col-md-3;
-  // @extend .col-xs-12;
+}
+
+.col-4 {
+  @extend .col-sm-6;
+  @extend .col-md-4;
+
 }
 
 .col-5 {

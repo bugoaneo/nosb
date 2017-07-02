@@ -44,3 +44,80 @@
 .form-callback button.mfp-close {
   font-size: 48px;
 }
+
+/* form-filtres */
+
+.form-filtres__label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.125em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.form-col {
+  margin-bottom: 20px;
+
+  &--4 {
+    padding: 0 20px;
+    @extend .col-md-4;
+    @include breakpoint(650px) {
+      width: 100%;
+      flex: 1 1 100%;
+    }        
+  }
+  &--2 {
+    @extend .col-sm-4;
+    @extend .col-md-2;
+    @include breakpoint(900px) {
+      margin-bottom: 0;
+    }
+    @include breakpoint(650px) {
+      width: 100%;
+      flex: 1 1 100%;
+    } 
+    &:last-child {
+      align-self: flex-end;
+      text-align: right;
+      @include breakpoint(650px) {
+        margin-top: 20px;
+      }
+    }   
+  }
+}
+
+.select-wrapper { 
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background: #ffffff;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: $border transparent transparent transparent;
+    pointer-events: none;
+  }
+}
+
+.form-filtres__select {
+  -webkit-appearance: none;
+    -moz-appearance: none;
+  width: 100%;
+  height: 100%;
+  padding: 0 30px 0 10px;
+  background: none;
+  outline: none;
+  border: 1px solid $border;
+  font-size: 14px;
+  option {
+    padding: 10px;
+  }
+}
+

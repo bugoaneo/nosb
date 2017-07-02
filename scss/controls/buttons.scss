@@ -6,8 +6,8 @@
   &--clean {
     color: $main-color;
     &:hover {
-    color: #fff;
-    background: $main-color;
+      color: #fff;
+      background: $main-color;
     } 
   }
   &--fill {
@@ -15,8 +15,8 @@
     background: $main-color;
     border-color: $main-color;
     &:hover {
-    color: $main-color;
-    background: #fff;
+      color: $main-color;
+      background: #fff;
     }    
   }
   &--center {

@@ -56,12 +56,12 @@ $('.maecenas__list').slick({
     removalDelay: 160
   });
 
-  // $('.gratitude-page__item').magnificPopup({
-  // type: 'image',
-  // gallery: {
-  //     enabled: true,
-  //     navigateByImgClick: true
-  //   },
-  // });
+  $('.gratitude-page__item').magnificPopup({
+  type: 'image',
+  gallery: {
+      enabled: true,
+      navigateByImgClick: true
+    },
+  });
 
 });
