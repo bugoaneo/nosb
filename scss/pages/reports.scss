@@ -44,7 +44,10 @@
 }
 
 .report__descr {
-  padding: 20px 10px 15px 25px;
+  display: flex;
+  flex-direction: column;
+  min-height: 180px;
+  padding: 20px 30px 15px 25px;
 }
 
 .report__assist {
@@ -52,4 +55,39 @@
   font-size: 0.75em;
   text-transform: uppercase;
   color: $lighten-text;
+}
+
+.report__header {
+  padding-bottom: 25px;
+}
+
+.report__title {
+  font-size: 1.125em;
+  color: $main-color;
+  font-weight: normal;
+}
+
+.report__info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  .report__date {
+    font-size: 0.8em;
+    color: $light;
+  }
+  .report__view {
+    @extend .report__date;
+    position: relative;
+    padding-left: 20px;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 11px;
+      background: url(../img/icons/sprites.png) no-repeat 0 -221px;
+    }
+  }
 }

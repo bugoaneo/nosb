@@ -2214,12 +2214,58 @@ img.mfp-img {
     object-fit: cover; }
 
 .report__descr {
-  padding: 20px 10px 15px 25px; }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 180px;
+  padding: 20px 30px 15px 25px; }
 
 .report__assist {
   margin-bottom: 15px;
   font-size: 0.75em;
   text-transform: uppercase;
   color: #707173; }
+
+.report__header {
+  padding-bottom: 25px; }
+
+.report__title {
+  font-size: 1.125em;
+  color: #d50317;
+  font-weight: normal; }
+
+.report__info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: auto; }
+  .report__info .report__date, .report__info .report__view {
+    font-size: 0.8em;
+    color: #b0b3b8; }
+  .report__info .report__view {
+    position: relative;
+    padding-left: 20px; }
+    .report__info .report__view:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 16px;
+      height: 11px;
+      background: url(../img/icons/sprites.png) no-repeat 0 -221px; }
 
 /*# sourceMappingURL=main.css.map */

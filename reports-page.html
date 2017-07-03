@@ -1,0 +1,151 @@
+<!DOCTYPE html>     
+ <html lang="ru">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width">
+   <meta name="robots" content="all">
+   <meta property="og:title" content="" />
+   <meta property="og:image" content="/img/logo.png" />
+   <meta property="og:description" content="" />
+   <meta name="description"  content="" />
+   <meta name="keywords"  content="" />
+ 
+ <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+ <link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
+ <link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
+ <link rel="manifest" href="img/favicons/manifest.json">
+ <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+ <meta name="theme-color" content="#ffffff">
+ 
+ 
+   <title>Ни шагу назад</title>
+
+   <link rel="stylesheet" href="css/main.css">
+   
+ </head>
+ 
+ <body>
+ 
+ <!--[if lt IE 9]>
+ <p class="browsehappy">Ваш браузер <strong>устарел</strong>. Пожалуйста<a href="
+ http://browsehappy.com/">обновите</a>
+ <![endif]-->
+ 
+  <div class="wrapper">
+    <header class="header">
+      <div class="container"> 
+        <div class="top-line">
+          <div class="logo">
+            <h1 class="logo__title">Ни шагу назад</h1>
+            <div class="logo__descr">Фонд помощи<br>Донбасу</div>
+          </div>
+          <div class="callback">
+            <a href="tel:+74951234567" class="callback__link">8 (495) 123-45-67</a>
+            <a href="#recall" class="btn btn--clean recall">Обратная связь</a>
+          </div>
+        </div><!-- top-line -->
+      
+        <nav class="nav nav--inner">
+          <button class="nav-toggle" type="button">Меню</button>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="/" class="nav__link">О фонде</a>
+            </li>
+            <li class="nav__item">
+              <a href="/" class="nav__link">СМИ о нас</a>
+            </li>
+            <li class="nav__item">
+              <a href="/" class="nav__link">Наши меценаты</a>
+            </li>
+
+            <li class="nav__item nav__item--trigger">
+              <a class="nav__link nav__link--active">Отчеты</a>
+
+              <div class="dropdown">
+                <ul class="nav__dropdown">
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown-link">Медицинские учреждения</a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown-link">Социальные учреждения</a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown-link">Ополчению</a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown-link">Семьям</a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown-link nav__dropdown-link--active">Другим категориям</a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown-link">Акты передачи гум помощи</a>
+                  </li>
+                  <li class="nav__dropdown-item">
+                    <a href="#" class="nav__dropdown-link">Отчет о фин поступлениях и тратах</a>
+                  </li>
+                </ul><!-- nav__dropdown -->
+              </div>
+
+            </li>
+
+            <li class="nav__item">
+              <a href="/" class="nav__link">Благодарности</a>
+            </li>
+            <li class="nav__item">
+              <a href="/" class="nav__link">Помочь Донбассу</a>
+            </li>
+            <li class="nav__item nav__item--vk">
+              <a href="/" class="nav__link nav__link--vk">Наша группа</a>
+            </li>
+          </ul>
+        </nav>
+
+      </div><!-- /container -->  
+
+    </header>
+    
+    <main class="main report">
+      <div class="container">
+
+        <ul class="bredcrambs__list">
+          <li class="bredcrambs__item">
+            <a href="index.html" class="bredcrambs__link">Главная</a>
+          </li>
+          <li class="bredcrambs__item bredcrambs__item--active">
+            <a href="index.html" class="bredcrambs__link">Отчеты</a>
+          </li>          
+          <li class="bredcrambs__item bredcrambs__item--active">Наш давний меценат ТД "Медполимерпром", оказал снова помощь</li>
+        </ul>
+
+        <h2 class="stn-title">Наш давний меценат ТД "Медполимерпром", оказал снова помощь</h2>
+
+      </div><!-- CONTAINER -->
+
+    </main><!-- MAIN -->
+
+   </div><!-- /WRAPPER -->
+
+   <footer class="footer">
+     <div class="container">
+       <div class="copyright">© 2017. Ни шагу назад</div>
+     </div>
+   </footer>
+
+  <div class="callback-form">
+    <form action="POST" id="recall" name="form-calback" class="form form-callback">
+      <h3 class="form__title">Обратная связь</h3>
+      <div class="form__text"><p>Наш консультант свяжется по e-mail или перезвонит Вам по телефону в течение одного - двух дней</p></div>
+        <input type="text" id="name-callback" name="name-callback" class="form__input" placeholder="Ф.И.О." required>
+        <input type="email" id="mail-callback" name="mail-callback" class="form__input" placeholder="Email">
+        <input type="tel" data-input-mask="phone" id="tel-callback" name="phon" class="form__input" placeholder="Телефон" required>
+      <button type="submit" class="btn btn--clean">Отправить</button> 
+    </form>
+  </div>
+
+  <a href="#top" class="to-top-btn" data-target="anchor">Наверх!</a>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="js/main-dist.js"></script>
+ </body>
+ </html>
+  
