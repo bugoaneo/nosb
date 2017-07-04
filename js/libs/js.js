@@ -15,6 +15,17 @@ $('.slider__list').slick({
   
 });
 
+$('.report__slider').slick({
+  slidesToScroll: 1,
+  autoplay: false,
+  infinity: false,
+  dots: true,
+  arrows: true,
+  nextArrow: '<button type="button" class="main-next">&nbsp;</button>',
+  prevArrow: '<button type="button" class="main-prev">&nbsp;</button>',
+  
+});
+
 $('.maecenas__list').slick({
   dots: true,
   arrows: false,

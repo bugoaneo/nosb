@@ -594,7 +594,7 @@ p {
 
 .thank {
   background-color: #f2f3f5; }
-  .thank .row {
+  .thank .row, .thank .report__container {
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -922,7 +922,7 @@ p {
   padding-right: 2rem;
   padding-left: 2rem;
 }*/
-.row {
+.row, .report__container {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: -ms-flexbox;
@@ -944,7 +944,7 @@ p {
   /*   margin-right: -1rem;
   margin-left: -1rem; */ }
 
-.reverse.row {
+.reverse.row, .reverse.report__container {
   -ms-flex-direction: row-reverse;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
@@ -1139,7 +1139,7 @@ p {
   -webkit-justify-content: space-around;
   justify-content: space-around; }
 
-.between-xs, .row {
+.between-xs, .row, .report__container {
   -ms-flex-pack: justify;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
@@ -1342,12 +1342,14 @@ p {
   .col-md-4,
   .col-4,
   .form-col--4,
+  .news-list,
   .col-md-5,
   .col-5,
   .col-md-6,
   .col-6,
   .col-md-7,
   .col-md-8,
+  .report__main,
   .col-md-9,
   .col-9,
   .col-md-10,
@@ -1385,7 +1387,7 @@ p {
     -webkit-flex-basis: 25%;
     flex-basis: 25%;
     max-width: 25%; }
-  .col-md-4, .col-4, .form-col--4 {
+  .col-md-4, .col-4, .form-col--4, .news-list {
     -ms-flex-preferred-size: 33.333%;
     -webkit-flex-basis: 33.333%;
     flex-basis: 33.333%;
@@ -1405,7 +1407,7 @@ p {
     -webkit-flex-basis: 58.333%;
     flex-basis: 58.333%;
     max-width: 58.333%; }
-  .col-md-8 {
+  .col-md-8, .report__main {
     -ms-flex-preferred-size: 66.667%;
     -webkit-flex-basis: 66.667%;
     flex-basis: 66.667%;
@@ -2176,10 +2178,10 @@ img.mfp-img {
     width: 100%; }
 
 /* .report */
-.report .row {
+.report .row, .report .report__container {
   margin: 0 -1em; }
   @media (max-width: 800px) {
-    .report .row {
+    .report .row, .report .report__container {
       margin: 0 2em; } }
 
 .report__text {
@@ -2268,4 +2270,4 @@ img.mfp-img {
       height: 11px;
       background: url(../img/icons/sprites.png) no-repeat 0 -221px; }
 
-/*# sourceMappingURL=main.css.map */
+/*single page*/

@@ -91,3 +91,17 @@
     }
   }
 }
+
+/*single page*/
+
+.report__container {
+  @extend .row;
+}
+
+.report__main {
+  @extend .col-md-8;
+}
+
+.news-list {
+  @extend .col-md-4;
+}

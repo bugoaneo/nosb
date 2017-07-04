@@ -1079,10 +1079,10 @@
         y ? o.data("magnificPopup", i) : o[0].magnificPopup = i, t.addGroup(o, i);
         return o;
     };
-    var x, P, I, O = "inline", A = function() {
+    var x, P, I, A = "inline", O = function() {
         I && (P.after(I.addClass(x)).detach(), I = null);
     };
-    e.magnificPopup.registerModule(O, {
+    e.magnificPopup.registerModule(A, {
         options: {
             hiddenClass: "hide",
             markup: "",
@@ -1090,12 +1090,12 @@
         },
         proto: {
             initInline: function() {
-                t.types.push(O), k(a + "." + O, function() {
-                    A();
+                t.types.push(A), k(a + "." + A, function() {
+                    O();
                 });
             },
             getInline: function(i, o) {
-                if (A(), i.src) {
+                if (O(), i.src) {
                     var s = t.st.inline, n = e(i.src);
                     if (n.length) {
                         var r = n[0].parentNode;
@@ -1145,7 +1145,7 @@
             }
         }
     });
-    var L, j = function(i) {
+    var L, _ = function(i) {
         if (i.data && void 0 !== i.data.title) return i.data.title;
         var o = t.st.image.titleSrc;
         if (o) {
@@ -1208,7 +1208,7 @@
                     (d = i.img[0]).naturalWidth > 0 ? i.hasSize = !0 : d.width || (i.hasSize = !1);
                 }
                 return t._parseMarkup(o, {
-                    title: j(i),
+                    title: _(i),
                     img_replaceWith: i.img
                 }, i), t.resizeImage(), i.hasSize ? (L && clearInterval(L), i.loadError ? (o.addClass("mfp-loading"), 
                 t.updateStatus("error", a.tError.replace("%url%", i.src))) : (o.removeClass("mfp-loading"), 
@@ -1217,9 +1217,9 @@
             }
         }
     });
-    var _, D = function() {
-        return void 0 === _ && (_ = void 0 !== document.createElement("p").style.MozTransform), 
-        _;
+    var j, D = function() {
+        return void 0 === j && (j = void 0 !== document.createElement("p").style.MozTransform), 
+        j;
     };
     e.magnificPopup.registerModule("zoom", {
         options: {
@@ -1449,6 +1449,14 @@
         arrows: !0,
         nextArrow: '<button type="button" class="main-next">&nbsp;</button>',
         prevArrow: '<button type="button" class="main-prev">&nbsp;</button>'
+    }), $(".report__slider").slick({
+        slidesToScroll: 1,
+        autoplay: !1,
+        infinity: !1,
+        dots: !0,
+        arrows: !0,
+        nextArrow: '<button type="button" class="main-next">&nbsp;</button>',
+        prevArrow: '<button type="button" class="main-prev">&nbsp;</button>'
     }), $(".maecenas__list").slick({
         dots: !0,
         arrows: !1,
@@ -1479,11 +1487,12 @@
         type: "inline",
         preloader: !1,
         mainClass: "zoom-in",
-        removalDelay: 160,
-        callbacks: {
-            beforeOpen: function() {
-                $(window).width() < 700 ? this.st.focus = !1 : this.st.focus = "#name";
-            }
+        removalDelay: 160
+    }), $(".gratitude-page__item").magnificPopup({
+        type: "image",
+        gallery: {
+            enabled: !0,
+            navigateByImgClick: !0
         }
     });
 });
