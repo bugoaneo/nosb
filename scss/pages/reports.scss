@@ -100,8 +100,43 @@
 
 .report__main {
   @extend .col-md-8;
+  width: 100%;
+  .report__info {
+    margin-bottom: 15px;
+  }
+}
+
+.news-list__title {
+  margin: 30px 0;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 .news-list {
   @extend .col-md-4;
+}
+
+.news-list__item {
+  padding: 25px 0;
+  border-bottom: 1px solid $border;
+  &:first-child {
+    padding-top: 0;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+  .report__header {
+    padding-bottom: 8px;
+  }
+
+  .report__date {
+    font-size: 0.75em;
+    color: $light;
+  }
+}
+
+.report__about {
+  padding-bottom: 40px;
+  border-bottom: 1px solid $border;
 }

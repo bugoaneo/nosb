@@ -1,0 +1,5 @@
+﻿.sprites { background: url(sprites.png) no-repeat; }
+.fb { width: 22px; height: 22px; background-position: -44px 0; }
+.ok { width: 22px; height: 22px; background-position: 0 -44px; }
+.tw { width: 22px; height: 22px; background-position: -42px -44px; }
+.vf { width: 24px; height: 24px; background-position: 0 0; }

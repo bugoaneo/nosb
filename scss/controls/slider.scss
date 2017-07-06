@@ -115,3 +115,14 @@
     transform: translate(-50%, -50%);
   }
 }
+
+//report 
+
+.report__slider {
+  border-bottom: 1px solid $border;
+  margin-bottom: 40px;
+  .slick-dots {
+    text-align: center;
+    padding: 10px 0;
+  }
+}
