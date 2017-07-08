@@ -137,10 +137,13 @@
       padding-left: 24px;
     } 
     &--trigger {
-      @include arrow (10px, 10px, $main-color);
+      .nav__link {
+        @include arrow (10px, 10px, $main-color);
+      }
     }
   }
   .nav__link {
+    padding: 17px 24px;
     &:after {
       display: none;
     }

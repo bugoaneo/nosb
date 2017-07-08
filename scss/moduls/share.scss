@@ -15,17 +15,53 @@
   height: 24px;
   margin-right: 12px;
   font-size: 0;
+  &--vk {
+    background: #4E76A1;
+  }
+  &--fb {
+    background: #5467a1
+  }
+  &--tw {
+    background: #29adf4;
+  }
+  &--ok {
+    background: #f5731d;
+  }
   .share-icon {
     display: inline-block;
     vertical-align: middle;
-    width: 50%;
-    height: 100%;
-    font-size: initial;
+    width: 22px;
+    height: 24px;
     text-align: center;
+    background: url(../img/icons/social.png) no-repeat;
+    &--vk {
+      background-position: 0 0;
+    }
+    &--fb {
+      background-position: -44px 2px;
+    }
+    &--tw {
+      background-position: -42px -42px;
+    }
+    &--ok {
+      background-position: 0 -42px;
+    }
   }
   .social__share-score {
-    @extend .share-icon;
+    display: inline-block;
+    vertical-align: middle;
     line-height: 24px;
+    width: 20px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
   }
 }
 
+// $social-list: #556f93, #5467a1, #29adf4, #f5731d;
+// @each $social-item in $social-list {
+//   .social__share-item--#{$social-item} {
+//     background: ;
+//   }
+// }

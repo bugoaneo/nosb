@@ -1,0 +1,40 @@
+//req
+
+.requisites__container {
+  @extend .row;
+}
+
+.requisites__main {
+  @extend .col-md-9;
+}
+
+.requisites__aside {
+  @extend .col-md-3;
+}
+
+.requisites__list {
+  border: 1px solid $border;
+  @include breakpoint(700px) {
+    border: none;
+    border-top: 1px solid $border;
+  }
+  tr td {
+    padding: 18px 18px 18px 30px;
+    border: 1px solid $border;
+    border-collapse: collapse;
+    font-size: 16px;
+    @include breakpoint(700px) {
+      border-top: none;
+    }
+    &:first-child {
+      font-weight: bold;
+      width: 35%;
+      @include breakpoint(700px) {
+        width: 100%;
+      }
+    }
+    @include breakpoint(700px) {
+      display: block;
+    }
+  }
+}

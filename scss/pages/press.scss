@@ -1,0 +1,55 @@
+//press 
+
+.press__container {
+  @extend .row;
+}
+
+.press__main {
+  @extend .col-md-8;
+  width: 100%;
+}
+
+.press__item {
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid $border;
+}
+
+.press__source {
+  margin-bottom: 14px;
+  font-size: 0;
+}
+
+.press__source-title,
+.press__source-date {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $lighten-text;
+}
+
+.press__source-title {
+  position: relative;
+  padding-right: 6px;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background: $lighten-text;
+  }
+}
+
+.press__source-date {
+  padding-left: 6px;
+}
+
+.press__title {
+  margin-bottom: 14px;
+  color: $main-color;
+  font-weight: normal;
+}

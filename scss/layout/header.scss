@@ -53,6 +53,9 @@
   font-size: 1.5em;
   color: inherit;
   white-space: nowrap;
+  @include breakpoint(419px) {
+    margin-bottom: 20px;
+  }
   &:before {
     content: '';
     position: absolute;
