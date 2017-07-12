@@ -54,32 +54,37 @@
   text-transform: uppercase;
   cursor: pointer;
 }
-
+.form-row {
+  justify-content: space-between;
+}
 .form-col {
   margin-bottom: 20px;
 
   &--4 {
     padding: 0 20px;
+    @extend .col-sm-6;
+    @extend .col-sm-6;
     @extend .col-md-4;
-    @include breakpoint(650px) {
+    @include breakpoint(800px) {
+      padding: 0;
       width: 100%;
       flex: 1 1 100%;
     }        
   }
   &--2 {
-    @extend .col-sm-4;
+    @extend .col-sm-6;
     @extend .col-md-2;
     @include breakpoint(900px) {
       margin-bottom: 0;
     }
-    @include breakpoint(650px) {
+    @include breakpoint(800px) {
       width: 100%;
       flex: 1 1 100%;
     } 
     &:last-child {
       align-self: flex-end;
       text-align: right;
-      @include breakpoint(650px) {
+      @include breakpoint(800px) {
         margin-top: 20px;
       }
     }   

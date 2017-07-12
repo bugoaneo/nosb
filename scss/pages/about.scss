@@ -1,0 +1,21 @@
+.about__workflow {
+  background: $section-bg;
+}
+
+.about__workflow-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-height: 280px;
+  align-content: space-between;
+}
+
+.about__workflow-item {
+  display: flex;
+  flex: 1 1 300px;
+  margin: 0 50px 0 0;
+}
+
+.about__workflow-pic {
+  margin-right: 30px;
+}

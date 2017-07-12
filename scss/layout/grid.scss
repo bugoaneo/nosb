@@ -6,7 +6,6 @@
 .col-4 {
   @extend .col-sm-6;
   @extend .col-md-4;
-
 }
 
 .col-5 {
@@ -26,11 +25,11 @@
   @extend .col-md-9;
 }
 
-[class*=col-] {
+/* [class*=col-] {
   @include breakpoint($sm) {
     margin-bottom: 20px;
     &:last-of-type {
       margin-bottom: 0;
     }
   }
-}
+} */
