@@ -65,3 +65,43 @@
   transition: 0.3s;
   @include arrow (20px, 20px, $main-color);
 }
+
+
+/*maecenas-page__filter*/
+
+.btn-filter {
+  font-size: initial;
+}
+
+.filter-icon {
+  display: inline-block;
+  vertical-align: middle;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  background: url(../img/icons/sprites.png) no-repeat;
+  &--muney {
+    background-position: 0 0;
+  }
+  &--product {
+    background-position: 0 -92px;
+  }
+  &--relapse {
+    background-position: 0 -46px;
+  }  
+}
+
+.filter-icon-summ {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5px 10px;
+  border: 2px solid;
+  margin-right: 10px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: bold;
+  color: $light;
+}
