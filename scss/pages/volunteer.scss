@@ -1,0 +1,12 @@
+.volunteer {
+    .row {
+    margin: 0 -1em;
+      @include breakpoint(800px) {
+        margin: 0 1em;
+      }
+    }
+}
+
+.volunteer__form-wrapper {
+  margin-top: 30px;
+}

@@ -4,7 +4,7 @@
   .row {
     margin: 0 -1em;
       @include breakpoint(800px) {
-        margin: 0 2em;
+        margin: 0 1em;
       }
     }
 }
@@ -17,7 +17,7 @@
 
 /* .report__filtres */
 .report__filtres {
-  margin-bottom: 50px;
+  margin: 20px 0 50px 0;
 }
 
 /* .report__list */

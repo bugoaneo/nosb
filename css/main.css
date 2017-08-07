@@ -286,7 +286,7 @@ p {
 .top-line {
   margin-bottom: 20px; }
 
-.logo {
+.logo__link {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -299,7 +299,7 @@ p {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
   @media (max-width: 800px) {
-    .logo {
+    .logo__link {
       margin-bottom: 30px; } }
 
 .logo__title {
@@ -818,6 +818,7 @@ p {
 
 /*maecenas-page__filter*/
 .btn-filter {
+  padding: 5px;
   font-size: initial; }
 
 .filter-icon {
@@ -879,19 +880,19 @@ p {
   border: 1px solid #d2d3d5;
   font-size: 0.9em; }
 
-.form__input::-webkit-input-placeholder {
+.form__input::-webkit-input-placeholder, .form__message {
   opacity: 1;
   font-family: "proxima"; }
 
-.form__input::-moz-placeholder {
+.form__input::-moz-placeholder, .form__message {
   opacity: 1;
   font-family: "proxima"; }
 
-.form__input:-ms-input-placeholder {
+.form__input:-ms-input-placeholder, .form__message {
   opacity: 1;
   font-family: "proxima"; }
 
-.form__input::placeholder {
+.form__input::placeholder, .form__message {
   opacity: 1;
   font-family: "proxima"; }
 
@@ -918,7 +919,7 @@ p {
     padding: 0 20px; }
     @media (max-width: 800px) {
       .form-col--4 {
-        padding: 0;
+        padding: 0 !important;
         width: 100%;
         -webkit-box-flex: 1;
         -webkit-flex: 1 1 100%;
@@ -942,6 +943,9 @@ p {
     @media (max-width: 800px) {
       .form-col--2:last-child {
         margin-top: 20px; } }
+  @media (max-width: 800px) {
+    .form-col--12 {
+      padding: 0 !important; } }
 
 .select-wrapper {
   position: relative;
@@ -963,7 +967,7 @@ p {
     border-color: #d2d3d5 transparent transparent transparent;
     pointer-events: none; }
 
-.form-filtres__select {
+.form__select {
   -webkit-appearance: none;
   -moz-appearance: none;
   width: 100%;
@@ -973,8 +977,48 @@ p {
   outline: none;
   border: 1px solid #d2d3d5;
   font-size: 14px; }
-  .form-filtres__select option {
+  .form__select option {
     padding: 10px; }
+
+.form__message {
+  width: 100%;
+  height: 85px;
+  padding: 6px;
+  border: 1px solid #d2d3d5; }
+
+.form__label-box {
+  position: relative;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding-left: 35px; }
+  .form__label-box:before, .form__label-box:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0; }
+  .form__label-box:before {
+    width: 20px;
+    height: 20px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border: 1px solid #d2d3d5; }
+
+input[type="checkbox"]:checked + .form__label-box:after {
+  left: 5px;
+  width: 7px;
+  height: 12px;
+  border-right: 3px solid #d50317;
+  border-bottom: 3px solid #d50317;
+  -webkit-transform: translateY(-60%) rotate(45deg);
+  -ms-transform: translateY(-60%) rotate(45deg);
+  transform: translateY(-60%) rotate(45deg); }
+
+/*customise*/
+#volunteer__form .form__input {
+  width: 100%;
+  margin-bottom: 0; }
 
 /* Uncomment and set these variables to customize the grid. */
 /*.container-fluid {
@@ -1031,7 +1075,8 @@ p {
 .col-xs-9,
 .col-xs-10,
 .col-xs-11,
-.col-xs-12 {
+.col-xs-12,
+.form-col--12 {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -ms-flex: 0 0 auto;
@@ -1117,7 +1162,7 @@ p {
   flex-basis: 91.667%;
   max-width: 91.667%; }
 
-.col-xs-12 {
+.col-xs-12, .form-col--12 {
   -ms-flex-preferred-size: 100%;
   -webkit-flex-basis: 100%;
   flex-basis: 100%;
@@ -2351,7 +2396,7 @@ img.mfp-img {
   margin: 0 -1em; }
   @media (max-width: 800px) {
     .report .row, .report .about__gallery, .report .report__container, .report .press__container, .report .requisites__container {
-      margin: 0 2em; } }
+      margin: 0 1em; } }
 
 .report__text {
   padding-bottom: 74px;
@@ -2360,7 +2405,7 @@ img.mfp-img {
 
 /* .report__filtres */
 .report__filtres {
-  margin-bottom: 50px; }
+  margin: 20px 0 50px 0; }
 
 /* .report__list */
 .report__list {
@@ -2717,6 +2762,15 @@ img.mfp-img {
 
 .maecenas-page__item-help {
   margin-top: auto; }
+
+.volunteer .row, .volunteer .about__gallery, .volunteer .report__container, .volunteer .press__container, .volunteer .requisites__container {
+  margin: 0 -1em; }
+  @media (max-width: 800px) {
+    .volunteer .row, .volunteer .about__gallery, .volunteer .report__container, .volunteer .press__container, .volunteer .requisites__container {
+      margin: 0 1em; } }
+
+.volunteer__form-wrapper {
+  margin-top: 30px; }
 
 .social-share {
   margin-top: 20px; }

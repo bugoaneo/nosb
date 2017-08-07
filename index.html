@@ -31,13 +31,15 @@
  http://browsehappy.com/">обновите</a>
  <![endif]-->
  
-  <div class="wrapper">
+  <div class="wrapper" id="top">
     <header class="header">
       <div class="container"> 
         <div class="top-line">
           <div class="logo">
-            <h1 class="logo__title">Ни шагу назад</h1>
-            <div class="logo__descr">Фонд помощи<br>Донбасу</div>
+            <a href="/" class="logo__link">
+              <h1 class="logo__title">Ни шагу назад</h1>
+              <div class="logo__descr">Фонд помощи<br>Донбасу</div>
+            </a>
           </div>
           <div class="callback">
             <a href="tel:+74951234567" class="callback__link">8 (495) 123-45-67</a>
@@ -45,21 +47,21 @@
           </div>
         </div><!-- top-line -->
       
-        <nav class="nav">
+        <nav class="nav nav--inner">
           <button class="nav-toggle" type="button">Меню</button>
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link nav__link--active">О фонде</a>
+              <a href="about.html" class="nav__link">О фонде</a>
             </li>
             <li class="nav__item">
-              <a href="" class="nav__link">СМИ о нас</a>
+              <a href="press.html" class="nav__link">СМИ о нас</a>
             </li>
             <li class="nav__item">
-              <a href="" class="nav__link">Наши меценаты</a>
+              <a class="nav__link nav__link--active">Наши меценаты</a>
             </li>
 
             <li class="nav__item nav__item--trigger">
-              <a class="nav__link">Отчеты</a>
+              <a href="reports.html" class="nav__link">Отчеты</a>
 
               <div class="dropdown">
                 <ul class="nav__dropdown">
@@ -76,7 +78,7 @@
                     <a href="#" class="nav__dropdown-link">Семьям</a>
                   </li>
                   <li class="nav__dropdown-item">
-                    <a href="#" class="nav__dropdown-link nav__dropdown-link--active">Другим категориям</a>
+                    <a href="#" class="nav__dropdown-link">Другим категориям</a>
                   </li>
                   <li class="nav__dropdown-item">
                     <a href="#" class="nav__dropdown-link">Акты передачи гум помощи</a>
@@ -90,10 +92,10 @@
             </li>
 
             <li class="nav__item">
-              <a href="" class="nav__link">Благодарности</a>
+              <a href="gratitude.html" class="nav__link">Благодарности</a>
             </li>
-            <li class="nav__item">
-              <a href="" class="nav__link nav__item--trigger">Помочь Донбассу</a>
+            <li class="nav__item nav__item--trigger">
+              <a href="#" class="nav__link">Помочь Донбассу</a>
 
               <div class="dropdown">
                 <ul class="nav__dropdown">
@@ -101,17 +103,17 @@
                     <a href="#" class="nav__dropdown-link">Наши представительства</a>
                   </li>
                   <li class="nav__dropdown-item">
-                    <a href="#" class="nav__dropdown-link">Стать волонтером</a>
+                    <a href="volunteer.html" class="nav__dropdown-link">Стать волонтером</a>
                   </li>
                   <li class="nav__dropdown-item">
-                    <a href="#" class="nav__dropdown-link">Реквизиты</a>
+                    <a href="requisites.html" class="nav__dropdown-link">Реквизиты</a>
                   </li>
                 </ul><!-- nav__dropdown -->
               </div>
-              
+
             </li>
             <li class="nav__item nav__item--vk">
-              <a href="" class="nav__link nav__link--vk">Наша группа</a>
+              <a href="/" class="nav__link nav__link--vk">Наша группа</a>
             </li>
           </ul>
         </nav>
@@ -167,7 +169,7 @@
     <section class="lead">
       <div class="container">
         <h2 class="stn-title">Помощь донбассу</h2>
-        <div class="lead__text">
+        <div class="page-text">
           <p>Фонд "Ни шагу назад", занимается помощью в ликвидации последствий военных действий, на территории Донбасса. Выполняет функцию связующего звена, между теми, кто желает и может оказать помощь, и теми, кто в ней нуждается на Донбассе.</p>
           <p>Самой главной и отличительной чертой нашего Фонда является то,что он держится и развивается, исключительно на волонтерстве и безвозмездной помощи различных организаций, с довольно скромным финансированием. По нашим просьбам, российские производители выделяют в качестве гуманитарной помощи свою продукцию или помогают денежными средствами.</p>
           <p>Помощь  Донбассу оказана уже на более, чем сто миллионов, (если приблизительно оценивать стоимость всех грузов, передаваемых меценатами), начиная с того времени, когда фонда еще не было, а руководитель фонда действовала как волонтер.  Честность и прозрачность деятельности фонда, обеспечивают неоднократную помощь от одних и тех же меценатов (производителей различной продукции), с некоторыми из них Фонд сотрудничает уже более 2х лет, в том числе и с крупными поставщиками продукции на гуманитарной основе, таких как: ТД "Медполимерпром", "Завод детской мебели" ("Эктивсити") и многие другие."</p>
@@ -216,7 +218,7 @@
         
         <div class="row">
           <div class="col-5">
-            <div class="gratitude__text"><p>На сегодняшний день, помощь уже оказана сотням учреждений на Донбассе, это: госпитали, больницы и род. дома, детские дома, интернаты, дома ребенка, развивающим детским центрам (для детей с различными заболеваниями), школам и дет. садам, обществу инвалидов, общежитиям для беженцев, домам культуры, спортивным и военно-патриотическим детским клубам и другим социальным организациям, а также сотням семей, прежде всего-это семьи погибших ополченцев.</p></div>
+            <div class="page-text"><p>На сегодняшний день, помощь уже оказана сотням учреждений на Донбассе, это: госпитали, больницы и род. дома, детские дома, интернаты, дома ребенка, развивающим детским центрам (для детей с различными заболеваниями), школам и дет. садам, обществу инвалидов, общежитиям для беженцев, домам культуры, спортивным и военно-патриотическим детским клубам и другим социальным организациям, а также сотням семей, прежде всего-это семьи погибших ополченцев.</p></div>
            </div>
           <div class="col-6">
             <div class="gratitude__list">
