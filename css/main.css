@@ -13,6 +13,10 @@ Twitter: @rich_clark
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  word-wrap: break-word; }
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -220,8 +224,10 @@ p {
   padding-left: 25px;
   margin-bottom: 40px;
   font-size: 2em;
-  text-transform: uppercase;
-  font-weight: normal; }
+  text-transform: uppercase; }
+  @media (max-width: 500px) {
+    .stn-title {
+      font-size: 1.7em; } }
   .stn-title:before {
     content: '';
     position: absolute;
@@ -394,8 +400,10 @@ p {
   .nav__item:last-child:hover .nav__link {
     background: initial;
     color: initial; }
-  .nav__item:first-child .nav__link {
+  .nav__item:first-child {
     padding-left: 0; }
+    .nav__item:first-child .nav__link {
+      padding-left: 6px; }
   .nav__item:hover .nav__link {
     background: #d50317;
     color: #fff; }
@@ -590,16 +598,18 @@ p {
   -ms-flex: 1 1 460px;
   flex: 1 1 460px; }
 
-.gratitude__list {
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap; }
-
 .gratitude__item {
-  width: 31%;
-  min-height: 240px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 150px;
+  -ms-flex: 1 1 150px;
+  flex: 1 1 150px;
+  margin: 10px;
+  max-width: 45%;
   -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5); }
+  @media (max-width: 500px) {
+    .gratitude__item {
+      max-width: 100%; } }
   .gratitude__item img {
     width: 100%;
     height: 100%;
@@ -1019,6 +1029,11 @@ input[type="checkbox"]:checked + .form__label-box:after {
 #volunteer__form .form__input {
   width: 100%;
   margin-bottom: 0; }
+
+.offices__form-wrapper {
+  margin-top: 40px; }
+  .offices__form-wrapper .row, .offices__form-wrapper .about__gallery, .offices__form-wrapper .report__container, .offices__form-wrapper .press__container, .offices__form-wrapper .requisites__container {
+    margin: 0 -20px; }
 
 /* Uncomment and set these variables to customize the grid. */
 /*.container-fluid {
@@ -2817,5 +2832,35 @@ img.mfp-img {
     font-size: 13px;
     font-weight: 500;
     text-align: center; }
+
+.map-wrapper {
+  position: relative; }
+
+.contacts__banner {
+  position: absolute;
+  top: 10%;
+  left: 8%;
+  padding: 50px 5%;
+  background: #fff;
+  max-width: 488px;
+  z-index: 1; }
+  @media (max-width: 800px) {
+    .contacts__banner {
+      position: static; } }
+
+.contacts__banner-title {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 1.2; }
+
+.contacts__banner-item {
+  margin-bottom: 15px; }
+  .contacts__banner-item:last-child {
+    margin-bottom: 0; }
+  .contacts__banner-item a[href^="mailto"] {
+    color: #d50317; }
+  .contacts__banner-item a[href^="tel"] {
+    font-weight: bold; }
 
 /*# sourceMappingURL=main.css.map */

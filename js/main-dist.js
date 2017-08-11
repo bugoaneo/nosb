@@ -797,7 +797,7 @@
 }), function(e) {
     "function" == typeof define && define.amd ? define([ "jquery" ], e) : e("object" == typeof exports ? require("jquery") : window.jQuery || window.Zepto);
 }(function(e) {
-    var t, i, o, s, n, r, a = "Close", l = "BeforeClose", d = "MarkupParse", c = "Open", p = "Change", u = "mfp", f = "." + u, h = "mfp-ready", m = "mfp-removing", v = "mfp-prevent-close", g = function() {}, y = !!window.jQuery, k = e(window), w = function(e, i) {
+    var t, i, o, s, n, r, a = "Close", l = "BeforeClose", d = "MarkupParse", c = "Open", p = "Change", u = "mfp", f = "." + u, h = "mfp-ready", m = "mfp-removing", v = "mfp-prevent-close", g = function() {}, y = !!window.jQuery, w = e(window), k = function(e, i) {
         t.ev.on(u + e + f, i);
     }, T = function(t, i, o, s) {
         var n = document.createElement("div");
@@ -851,7 +851,7 @@
                         var p = l[s];
                         p = p.charAt(0).toUpperCase() + p.slice(1), t["init" + p].call(t);
                     }
-                    S("BeforeOpen"), t.st.showCloseBtn && (t.st.closeBtnInside ? (w(d, function(e, t, i, o) {
+                    S("BeforeOpen"), t.st.showCloseBtn && (t.st.closeBtnInside ? (k(d, function(e, t, i, o) {
                         i.close_replaceWith = b(o.type);
                     }), n += " mfp-close-btn-in") : t.wrap.append(b())), t.st.alignTop && (n += " mfp-align-top"), 
                     t.fixedContentPos ? t.wrap.css({
@@ -859,17 +859,17 @@
                         overflowX: "hidden",
                         overflowY: t.st.overflowY
                     }) : t.wrap.css({
-                        top: k.scrollTop(),
+                        top: w.scrollTop(),
                         position: "absolute"
                     }), (!1 === t.st.fixedBgPos || "auto" === t.st.fixedBgPos && !t.fixedContentPos) && t.bgOverlay.css({
                         height: o.height(),
                         position: "absolute"
                     }), t.st.enableEscapeKey && o.on("keyup" + f, function(e) {
                         27 === e.keyCode && t.close();
-                    }), k.on("resize" + f, function() {
+                    }), w.on("resize" + f, function() {
                         t.updateSize();
                     }), t.st.closeOnContentClick || (n += " mfp-auto-cursor"), n && t.wrap.addClass(n);
-                    var u = t.wH = k.height(), m = {};
+                    var u = t.wH = w.height(), m = {};
                     if (t.fixedContentPos && t._hasScrollBar(u)) {
                         var v = t._getScrollbarSize();
                         v && (m.marginRight = v);
@@ -911,7 +911,7 @@
             if (t.isIOS) {
                 var i = document.documentElement.clientWidth / window.innerWidth, o = window.innerHeight * i;
                 t.wrap.css("height", o), t.wH = o;
-            } else t.wH = e || k.height();
+            } else t.wH = e || w.height();
             t.fixedContentPos || t.wrap.css("height", t.wH), S("Resize");
         },
         updateItemHTML: function() {
@@ -963,7 +963,7 @@
                 var n = void 0 !== s.disableOn ? s.disableOn : e.magnificPopup.defaults.disableOn;
                 if (n) if (e.isFunction(n)) {
                     if (!n.call(t)) return !0;
-                } else if (k.width() < n) return !0;
+                } else if (w.width() < n) return !0;
                 i.type && (i.preventDefault(), t.isOpen && i.stopPropagation()), s.el = e(i.mfpEl), 
                 s.delegate && (s.items = o.find(s.delegate)), t.open(s);
             }
@@ -998,7 +998,7 @@
             this.bgOverlay.removeClass(e), t.wrap.removeClass(e);
         },
         _hasScrollBar: function(e) {
-            return (t.isIE7 ? o.height() : document.body.scrollHeight) > (e || k.height());
+            return (t.isIE7 ? o.height() : document.body.scrollHeight) > (e || w.height());
         },
         _setFocus: function() {
             (t.st.focus ? t.content.find(t.st.focus).eq(0) : t.wrap).focus();
@@ -1079,10 +1079,10 @@
         y ? o.data("magnificPopup", i) : o[0].magnificPopup = i, t.addGroup(o, i);
         return o;
     };
-    var x, P, I, A = "inline", O = function() {
-        I && (P.after(I.addClass(x)).detach(), I = null);
+    var x, I, P, O = "inline", A = function() {
+        P && (I.after(P.addClass(x)).detach(), P = null);
     };
-    e.magnificPopup.registerModule(A, {
+    e.magnificPopup.registerModule(O, {
         options: {
             hiddenClass: "hide",
             markup: "",
@@ -1090,16 +1090,16 @@
         },
         proto: {
             initInline: function() {
-                t.types.push(A), w(a + "." + A, function() {
-                    O();
+                t.types.push(O), k(a + "." + O, function() {
+                    A();
                 });
             },
             getInline: function(i, o) {
-                if (O(), i.src) {
+                if (A(), i.src) {
                     var s = t.st.inline, n = e(i.src);
                     if (n.length) {
                         var r = n[0].parentNode;
-                        r && r.tagName && (P || (x = s.hiddenClass, P = T(x), x = "mfp-" + x), I = n.after(P).detach().removeClass(x)), 
+                        r && r.tagName && (I || (x = s.hiddenClass, I = T(x), x = "mfp-" + x), P = n.after(I).detach().removeClass(x)), 
                         t.updateStatus("ready");
                     } else t.updateStatus("error", s.tNotFound), n = e("<div>");
                     return i.inlineElement = n, n;
@@ -1121,7 +1121,7 @@
         },
         proto: {
             initAjax: function() {
-                t.types.push(E), z = t.st.ajax.cursor, w(a + "." + E, M), w("BeforeChange." + E, M);
+                t.types.push(E), z = t.st.ajax.cursor, k(a + "." + E, M), k("BeforeChange." + E, M);
             },
             getAjax: function(i) {
                 z && e(document.body).addClass(z), t.updateStatus("loading");
@@ -1165,11 +1165,11 @@
         proto: {
             initImage: function() {
                 var i = t.st.image, o = ".image";
-                t.types.push("image"), w(c + o, function() {
+                t.types.push("image"), k(c + o, function() {
                     "image" === t.currItem.type && i.cursor && e(document.body).addClass(i.cursor);
-                }), w(a + o, function() {
-                    i.cursor && e(document.body).removeClass(i.cursor), k.off("resize" + f);
-                }), w("Resize" + o, t.resizeImage), t.isLowIE && w("AfterChange", t.resizeImage);
+                }), k(a + o, function() {
+                    i.cursor && e(document.body).removeClass(i.cursor), w.off("resize" + f);
+                }), k("Resize" + o, t.resizeImage), t.isLowIE && k("AfterChange", t.resizeImage);
             },
             resizeImage: function() {
                 var e = t.currItem;
@@ -1246,7 +1246,7 @@
                     }, c = function() {
                         t.content.css("visibility", "visible");
                     };
-                    w("BuildControls" + o, function() {
+                    k("BuildControls" + o, function() {
                         if (t._allowZoom()) {
                             if (clearTimeout(s), t.content.css("visibility", "hidden"), !(e = t._getItemToZoom())) return void c();
                             (n = d(e)).css(t._getOffset()), t.wrap.append(n), s = setTimeout(function() {
@@ -1257,7 +1257,7 @@
                                 }, r);
                             }, 16);
                         }
-                    }), w(l + o, function() {
+                    }), k(l + o, function() {
                         if (t._allowZoom()) {
                             if (clearTimeout(s), t.st.removalDelay = r, !e) {
                                 if (!(e = t._getItemToZoom())) return;
@@ -1268,7 +1268,7 @@
                                 n.css(t._getOffset());
                             }, 16);
                         }
-                    }), w(a + o, function() {
+                    }), k(a + o, function() {
                         t._allowZoom() && (c(), n && n.remove(), e = null);
                     });
                 }
@@ -1320,9 +1320,9 @@
         },
         proto: {
             initIframe: function() {
-                t.types.push(W), w("BeforeChange", function(e, t, i) {
+                t.types.push(W), k("BeforeChange", function(e, t, i) {
                     t !== i && (t === W ? B() : i === W && B(!0));
-                }), w(a + "." + W, function() {
+                }), k(a + "." + W, function() {
                     B();
                 });
             },
@@ -1358,18 +1358,18 @@
         proto: {
             initGallery: function() {
                 var i = t.st.gallery, s = ".mfp-gallery";
-                return t.direction = !0, !(!i || !i.enabled) && (n += " mfp-gallery", w(c + s, function() {
+                return t.direction = !0, !(!i || !i.enabled) && (n += " mfp-gallery", k(c + s, function() {
                     i.navigateByImgClick && t.wrap.on("click" + s, ".mfp-img", function() {
                         return t.items.length > 1 ? (t.next(), !1) : void 0;
                     }), o.on("keydown" + s, function(e) {
                         37 === e.keyCode ? t.prev() : 39 === e.keyCode && t.next();
                     });
-                }), w("UpdateStatus" + s, function(e, i) {
+                }), k("UpdateStatus" + s, function(e, i) {
                     i.text && (i.text = q(i.text, t.currItem.index, t.items.length));
-                }), w(d + s, function(e, o, s, n) {
+                }), k(d + s, function(e, o, s, n) {
                     var r = t.items.length;
                     s.counter = r > 1 ? q(i.tCounter, n.index, r) : "";
-                }), w("BuildControls" + s, function() {
+                }), k("BuildControls" + s, function() {
                     if (t.items.length > 1 && i.arrows && !t.arrowLeft) {
                         var o = i.arrowMarkup, s = t.arrowLeft = e(o.replace(/%title%/gi, i.tPrev).replace(/%dir%/gi, "left")).addClass(v), n = t.arrowRight = e(o.replace(/%title%/gi, i.tNext).replace(/%dir%/gi, "right")).addClass(v);
                         s.click(function() {
@@ -1378,11 +1378,11 @@
                             t.next();
                         }), t.container.append(s.add(n));
                     }
-                }), w(p + s, function() {
+                }), k(p + s, function() {
                     t._preloadTimeout && clearTimeout(t._preloadTimeout), t._preloadTimeout = setTimeout(function() {
                         t.preloadNearbyImages(), t._preloadTimeout = null;
                     }, 16);
-                }), void w(a + s, function() {
+                }), void k(a + s, function() {
                     o.off(s), t.wrap.off("click" + s), t.arrowRight = t.arrowLeft = null;
                 }));
             },
@@ -1426,12 +1426,12 @@
             initRetina: function() {
                 if (window.devicePixelRatio > 1) {
                     var e = t.st.retina, i = e.ratio;
-                    (i = isNaN(i) ? i() : i) > 1 && (w("ImageHasSize." + N, function(e, t) {
+                    (i = isNaN(i) ? i() : i) > 1 && (k("ImageHasSize." + N, function(e, t) {
                         t.img.css({
                             "max-width": t.img[0].naturalWidth / i,
                             width: "100%"
                         });
-                    }), w("ElementParse." + N, function(t, o) {
+                    }), k("ElementParse." + N, function(t, o) {
                         o.src = e.replaceSrc(o, i);
                     }));
                 }
@@ -1439,6 +1439,17 @@
         }
     }), C();
 }), $(document).ready(function() {
+    function e() {
+        (t = new ymaps.Map("map", {
+            center: [ 55.76867412, 37.58246556 ],
+            zoom: 16
+        })).controls.remove("searchControl").remove("trafficControl").remove("geolocationControl").remove("zoomControl").remove("rulerControl").remove("typeSelector"), 
+        t.behaviors.disable([ "scrollZoom" ]), t.behaviors.get("drag").disable(), (i = new ymaps.Placemark([ 55.753994, 37.622093 ], {}, {
+            iconImageHref: "../img/icons/big-pin.png",
+            iconImageSize: [ 32, 46 ],
+            iconImageOffset: [ -3, -42 ]
+        })).id = id, t.geoObjects.add(i);
+    }
     $(".nav-toggle").click(function() {
         $(".nav__list").toggleClass("nav__list--active");
     }), $(".slider__list").slick({
@@ -1482,6 +1493,12 @@
                 slidesToShow: 2,
                 slidesToScroll: 1
             }
+        }, {
+            breakpoint: 500,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
         } ]
     }), $(".recall").magnificPopup({
         type: "inline",
@@ -1499,6 +1516,7 @@
         return $("body, html").animate({
             scrollTop: t
         }, 700), !1;
-    });
+    }), ymaps.ready(e);
+    var t, i;
 });
 //# sourceMappingURL=main-dist.js.map

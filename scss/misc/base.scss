@@ -44,7 +44,9 @@ p {
   margin-bottom: 40px;
   font-size: 2em;
   text-transform: uppercase;
-  font-weight: normal;
+  @include breakpoint($xs) {
+    font-size: 1.7em;
+  }
   &:before {
     content: '';
     position: absolute;

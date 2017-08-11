@@ -1,7 +1,7 @@
 .volunteer {
-    .row {
+  .row {
     margin: 0 -1em;
-      @include breakpoint(800px) {
+    @include breakpoint(800px) {
         margin: 0 1em;
       }
     }

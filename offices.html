@@ -141,8 +141,8 @@
           <p>Для желающих оказывать волонтерскую помощь, просьба заполнить форму:</p>
         </div>
 
-        <div class="volunteer__form-wrapper">
-          <form action="/" method="POST" name="volunteer__form" id="volunteer__form" class="volunteer__form">
+        <div class="offices__form-wrapper">
+          <form action="/" method="POST" name="volunteer__form" id="offices__form" class="offices__form">
             <div class="form-row row">
               <div class="form-col form-col--4">
                 <div class="select-wrapper">
@@ -163,20 +163,18 @@
       </div><!-- /container -->
       <div class="map-wrapper">
       <div class="contacts__banner">
+        <h2 class="contacts__banner-title">Фонд помощи Донбассу «Ни шагу назад»</h2>
         <ul class="contacts__banner-list">
+          <li class="contacts__banner-item" id="contacts-adress">
+            123056, г. Москва <br><br>
+            Ул. Юлиуса Фучика Д. 6, стр. 2
+          </li>        
           <li class="contacts__banner-item">
-            <span>Тел.:</span>  8&nbsp;(800)&nbsp;333-03-78
-            <span class="call-free">Бесплатный вызов по всей России</span>
+            <span>Тел.:</span> <a id="contacts-tel" href="tel:+79265392006">+7 (926) 539-20-06</a>
           </li>
           <li class="contacts__banner-item">
             <span>E-mail:</span> 
-            <a href="mailto:office@internet-akademia.ru" class="contacts__email-link">office@internet-akademia.ru</a>
-          </li>
-          <li class="contacts__banner-item">
-            <span>Aдрес:</span> СПб, Лиговский 50, к.1<br> Офисный центр «Лиговский 50», офис №9
-          </li>
-          <li class="contacts__banner-item">
-            <span>Режим работы:</span> пн-пт 10:00-19:00 по МСК
+            <a id="contacts__email" href="mailto:nishagu-nazad@yandex.ru" class="contacts__email-link">nishagu-nazad@yandex.ru</a>
           </li>
         </ul>
       </div>
@@ -209,26 +207,6 @@
    <script src="js/map.js"></script>
   <script src="js/main-dist.js"></script>
   
-      <script type="text/javascript">
-ymaps.ready(init);
-  var myMap,
-      myPin,
-      myPlacemark;
-
-        function init(){ 
-            myMap = new ymaps.Map("map", {
-                center: [59.92451180, 30.35157970],
-                zoom: 16
-            });
-
-myMap.controls.remove('searchControl').remove('trafficControl').remove('geolocationControl').remove('zoomControl').remove('rulerControl').remove('typeSelector');
-myMap.behaviors.disable(['scrollZoom']); 
-myPlacemark = new ymaps.Placemark([55.75399400, 37.62209300]);
-  // myMap.geoObjects.add(myPlacemark);
-  // myMap.setBounds(myMap.geoObjects.getBounds());
-  
-  }
-    </script>
  </body>
  </html>
   

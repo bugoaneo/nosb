@@ -55,6 +55,13 @@ $('.maecenas__list').slick({
         slidesToScroll: 1
       }
     },
+    {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
   ]
 });
 
@@ -82,4 +89,33 @@ $('.maecenas__list').slick({
     $('body, html').animate({scrollTop: bl_top}, 700);
     return false;
   });
+
+  /*ya maps*/
+ymaps.ready(init);
+  var myMap,
+      myPin,
+      myPlacemark;
+
+        function init(){ 
+            myMap = new ymaps.Map("map", {
+                center: [55.76867412, 37.58246556],
+                zoom: 16
+            });
+
+myMap.controls.remove('searchControl').remove('trafficControl').remove('geolocationControl').remove('zoomControl').remove('rulerControl').remove('typeSelector');
+myMap.behaviors.disable(['scrollZoom']); 
+myMap.behaviors.get('drag').disable();
+//myPlacemark = new ymaps.Placemark([55.75399400, 37.62209300]);
+  // myMap.geoObjects.add(myPlacemark);
+  // myMap.setBounds(myMap.geoObjects.getBounds());
+      myPlacemark=new ymaps.Placemark([55.75399400, 37.62209300],{
+    }, {
+    iconImageHref:'../img/icons/big-pin.png',
+    iconImageSize:[32, 46],
+    iconImageOffset:[-3,-42]
+    });
+    myPlacemark.id=id;
+    myMap.geoObjects.add(myPlacemark);
+  }
+
 });

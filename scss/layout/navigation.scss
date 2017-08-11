@@ -35,9 +35,13 @@
       }
     }
   }
-  &:first-child .nav__link {
+  &:first-child {
     padding-left: 0;
+     .nav__link {
+      padding-left: 6px;
+    }    
   }
+
   &:hover {
     .nav__link {
       background: $main-color;

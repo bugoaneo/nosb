@@ -185,3 +185,9 @@ input[type="checkbox"]:checked + .form__label-box {
   // }
 }
 
+.offices__form-wrapper {
+  margin-top: 40px;
+  .row {
+    margin: 0 -20px;
+  }
+}
